@@ -1,5 +1,41 @@
 {
-  "dependencies": {
+  "name": "api-specification",
+  "private": true,
+  "version": "0.1.0",
+  "description": "only testing",
+  "license": "MIT",
+  "author": "yo",
+  "engines": {
+    "node": ">22.0.0"
+  },
+  "prettier": {
+    "overrides": [
+      {
+        "files": "*.{md,mdx}",
+        "options": {
+          "proseWrap": "preserve"
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "check": "npm run check:schema && npm run check:docs",
+    "check:schema": "npm run check:schema:ts && npm run check:schema:json && npm run check:schema:md",
+    "check:schema:ts": "tsc",
+    "check:schema:json": "for f in schema/*/schema.ts; do typescript-json-schema --defaultNumberType integer --required --skipLibCheck \"$f\" \"*\" | cat | cmp \"${f%.ts}.json\" - || exit 1; done",
+    "check:schema:md": "for f in docs/specification/*/schema.mdx; do typedoc --entryPoints \"schema/$(basename -- $(dirname -- \"$f\"))/schema.ts\" | cmp \"$f\" - || exit 1; done",
+    "check:docs": "npm run check:docs:format && npm run check:docs:links",
+    "check:docs:format": "prettier --check \"**/*.{md,mdx}\"",
+    "check:docs:links": "cd docs && mintlify broken-links",
+    "generate:schema": "npm run generate:schema:json && npm run generate:schema:md",
+    "generate:schema:json": "for f in schema/*/schema.ts; do typescript-json-schema --defaultNumberType integer --required --skipLibCheck \"$f\" \"*\" -o \"${f%.ts}.json\"; done",
+    "generate:schema:md": "for f in docs/specification/*/schema.mdx; do typedoc --entryPoints \"schema/$(basename -- $(dirname -- \"$f\"))/schema.ts\" > \"$f\"; done",
+    "format": "prettier --write \"**/*.{md,mdx}\" --ignore \"docs/specification/*/schema.mdx\" ",
+    "serve:docs": "mintlify dev",
+    "serve:docs_old": "cd docs && mintlify dev",
+    "serve:blog": "cd blog && hugo serve"
+  },
+  "devDependencies": {
     "mintlify": "^4.2.173",
     "prettier": "^3.6.2"
   }
