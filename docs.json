@@ -9,6 +9,9 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
+    "languages": [
+    {
+	"language": "en",
     "tabs": [
       {
         "tab": "Guides",
@@ -82,10 +85,88 @@
         }
       ]
     }
+	  },
+    {
+	"language": "es",
+    "tabs": [
+      {
+        "tab": "Guias",
+        "groups": [
+          {
+            "group": "Empezando",
+            "pages": [
+              "docs/es/index",
+              "docs/es/quickstart",
+              "docs/es/development"
+            ]
+          },
+          {
+            "group": "Personalización",
+            "pages": [
+              "docs/es/essentials/settings",
+              "docs/es/essentials/navigation"
+            ]
+          },
+          {
+            "group": "Redacción de contenido",
+            "pages": [
+              "docs/es/essentials/markdown",
+              "docs/es/essentials/code",
+              "docs/es/essentials/images",
+              "docs/es/essentials/reusable-snippets"
+            ]
+          },
+          {
+            "group": "Herramientas IA",
+            "pages": [
+              "docs/es/ai-tools/cursor",
+              "docs/es/ai-tools/claude-code",
+              "docs/es/ai-tools/windsurf"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Referencia de API",
+        "groups": [
+          {
+            "group": "Documentación de API",
+            "pages": [
+              "docs/es/api-reference/introduction"
+            ]
+          },
+          {
+            "group": "Ejemplos de puntos finales",
+            "pages": [
+              "docs/es/api-reference/endpoint/get",
+              "docs/es/api-reference/endpoint/create",
+              "docs/es/api-reference/endpoint/delete",
+              "docs/es/api-reference/endpoint/webhook"
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Documentación",
+          "href": "https://mintlify.com/docs",
+          "icon": "book-open-cover"
+        },
+        {
+          "anchor": "Blog",
+          "href": "https://mintlify.com/blog",
+          "icon": "newspaper"
+        }
+      ]
+    }
+	  }
+    ]
   },
   "logo": {
     "light": "/docs/logo/light.svg",
-    "dark": "/docs/logo/darkNew.svg"
+    "dark": "/docs/logo/dark.svg"
   },
   "navbar": {
     "links": [
