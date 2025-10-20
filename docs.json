@@ -19,33 +19,33 @@
           {
             "group": "Getting started",
             "pages": [
-              "docs/index",
-              "docs/quickstart",
-              "docs/development"
+              "docs/en/index",
+              "docs/en/quickstart",
+              "docs/en/development"
             ]
           },
           {
             "group": "Customization",
             "pages": [
-              "docs/essentials/settings",
-              "docs/essentials/navigation"
+              "docs/en/essentials/settings",
+              "docs/en/essentials/navigation"
             ]
           },
           {
             "group": "Writing content",
             "pages": [
-              "docs/essentials/markdown",
-              "docs/essentials/code",
-              "docs/essentials/images",
-              "docs/essentials/reusable-snippets"
+              "docs/en/essentials/markdown",
+              "docs/en/essentials/code",
+              "docs/en/essentials/images",
+              "docs/en/essentials/reusable-snippets"
             ]
           },
           {
             "group": "AI tools",
             "pages": [
-              "docs/ai-tools/cursor",
-              "docs/ai-tools/claude-code",
-              "docs/ai-tools/windsurf"
+              "docs/en/ai-tools/cursor",
+              "docs/en/ai-tools/claude-code",
+              "docs/en/ai-tools/windsurf"
             ]
           }
         ]
@@ -56,16 +56,16 @@
           {
             "group": "API documentation",
             "pages": [
-              "docs/api-reference/introduction"
+              "docs/en/api-reference/introduction"
             ]
           },
           {
             "group": "Endpoint examples",
             "pages": [
-              "docs/api-reference/endpoint/get",
-              "docs/api-reference/endpoint/create",
-              "docs/api-reference/endpoint/delete",
-              "docs/api-reference/endpoint/webhook"
+              "docs/en/api-reference/endpoint/get",
+              "docs/en/api-reference/endpoint/create",
+              "docs/en/api-reference/endpoint/delete",
+              "docs/en/api-reference/endpoint/webhook"
             ]
           }
         ]
